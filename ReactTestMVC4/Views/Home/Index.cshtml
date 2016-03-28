@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Slick Carousel Demo</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.15/slick.css" />
+    <link href="~/Content/Site.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div id="root" class="react-container"></div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+    var data = [
+        { imageUrl: "http://pixdaus.com/files/items/pics/0/35/510035_e696e12ba627f8d4ea3080118b66b0cb_large.jpg", caption: "chestnut horse", index: 0 },
+        { imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Horseracing_Churchill_Downs.jpg", caption: "this is a racehorse", index: 1 },
+        { imageUrl: "http://www.unioncountyfair.net/horse_racing_4.jpg", caption: "This is a harness race horse", index: 2 },
+        { imageUrl: "http://canterburyshowplace.com/wp-content/uploads/2012/12/844_10200142961084639_1537446016_n.jpg", caption: "this is equestrian", index: 3 }
+    ];
+</script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/respond.min.js"></script>
+<script src="~/Scripts/react/react.js"></script>
+<script src="~/Scripts/react/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-slick/0.11.0/react-slick.js"></script>
+<script src="@Url.Content("~/Scripts/site/carousel.jsx")"></script>
+</body>
+</html>

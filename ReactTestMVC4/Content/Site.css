@@ -1,0 +1,54 @@
+﻿.container {
+        max-height: 600px;
+    }
+
+img {
+    max-height: 600px;
+    width: auto;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .left-arrow, .right-arrow {
+        left: 20% !important;
+    }
+
+    .caption {
+        font-size: 12px;
+        top: 90%;
+        
+    }
+}
+
+@media (min-width: 481px) {
+    .left-arrow {
+        left: 20% !important;
+    }
+
+    .right-arrow {
+        left: 60% !important;
+    }
+
+    .caption {
+        font-size: 24px;
+        top: 92%;
+        padding: 8px 0;    
+    }
+}
+
+.caption {
+    color: white;
+    position: absolute;
+    width: inherit;
+    text-align: center;
+    background-color: #000000;
+    -ms-opacity: 0.6;
+    opacity: 0.6;   
+}
+
+.react-container {
+    margin: 0 auto;
+    padding: 40px;
+    width: 90%;
+    color: #333;
+}
