@@ -22,27 +22,7 @@ var CustomNextArrow = React.createClass({
 });
 
 
-var afterChangeSlide = function (currentSlide) {
-    setCaption(currentSlide);
-} 
-
-var beforeChangeSlide = function (currentSlide) {
-    $( ".caption" ).remove();
-}
-
-var setCaption = function (slidePosition) {
-    var caption = $('img[data-index="'+slidePosition+'"]').data('caption');
-    if (caption)
-    {
-        $(".slick-slide.slick-active").append('<div class="caption">' + caption + '</div>');
-    }
-}
-
-
 var Slides = React.createClass({
-   componentDidMount: function() {
-    setCaption(0);
-  },
   render: function() {
     var settings = {
         speed:800,
@@ -50,14 +30,13 @@ var Slides = React.createClass({
         autoplay: true,
         autoplaySpeed:5000,
         prevArrow: CustomPrevArrow,
-        nextArrow: CustomNextArrow,
-        afterChange: afterChangeSlide,
-        beforeChange: beforeChangeSlide
+        nextArrow: CustomNextArrow
     }
     var imgNodes = this.props.data.map(function(img) {
       return (
-        <div key={img.index}>
+        <div key={img.index} className="img-container">
             <img src={img.imageUrl} data-index={img.index} data-caption={img.caption}  />
+            {img.caption ? <div className="caption">{img.caption}</div> : null}
         </div>
       );
     });
